@@ -1,5 +1,5 @@
-create database bai_tap_ngay_2;
-use bai_tap_ngay_2;
+create database bai_tap_1;
+use bai_tap_1;
 create table phieuxuat(
 sopx int primary key,
 ngayxuat date

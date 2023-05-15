@@ -1,5 +1,5 @@
-create database bai_tap_ngay_2_bai_2;
-use bai_tap_ngay_2_bai_2;
+create database bai_tap_2;
+use bai_tap_2;
 create table customer(
 cid int primary key,
 cName varchar(20),
