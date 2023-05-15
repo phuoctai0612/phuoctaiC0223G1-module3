@@ -134,7 +134,7 @@ value(1,20201208,20201208,0,3,1,3),
 (11,20210425,20210425,0,2,2,1),
 (12,20210525,20210527,0,7,10,1);
 select * from hop_dong;
-insert into hop_dong_chi_tiet(ma_hop_dong_chi_tiet,ma_hop_dong,ma_dich_vu_di_kem,so_luong)
+insert into hop_dong_chi_tiet(ma_hop_dong_chi_tiet,so_luong,ma_hop_dong,ma_dich_vu_di_kem)
 value(1,5,2,4),
 (2,8,2,5),
 (3,15,2,6),
@@ -142,13 +142,43 @@ value(1,5,2,4),
 (5,11,3,2),
 (6,1,1,3),
 (7,2,1,2),
-(8,2,12,2)
-;
+(8,2,12,2);
 insert into dich_vu_di_kem(ma_dich_vu_di_kem,ten_dich_vu_di_kem,gia,don_vi,trang_thai)
-value(1,	"Karaoke"	,10000	,giờ, "tiện nghi, hiện tại"),
+value(1,	"Karaoke"	,10000	,"giờ", "tiện nghi, hiện tại"),	
 (2,"	Thuê xe máy",	10000,	"chiếc",	"hỏng 1 xe"),
 (3,	"Thuê xe đạp",	20000,	"chiếc","tốt"),
-(4,	Buffet buổi sáng,	15000,	suất,	đầy đủ đồ ăn, tráng miệng),
-(5,	Buffet buổi trưa	,90000,	suất,	đầy đủ đồ ăn, tráng miệng),
-(6,	Buffet buổi tối	,16000	,suất,	đầy đủ đồ ăn, tráng miệng)
-);
+(4,	"Buffet buổi sáng",	15000,	"suất",	"đầy đủ đồ ăn, tráng miệng"),
+(5,	"Buffet buổi trưa"	,90000,"	suất",	"đầy đủ đồ ăn, tráng miệng"),
+(6,	"Buffet buổi tối"	,16000	,"suất",	"đầy đủ đồ ăn, tráng miệng");
+insert into loai_dich_vu(ma_loai_dich_vu,ten_loai_dich_vu)
+value(1,"Villa"),(2,"House"),(3,"Room");
+insert into kieu_thue(ma_kieu_thue,ten_kieu_thue)
+value(1,"year"),(2,"month"),(3,"day"),(4,"hour");
+insert into dich_vu(ma_dich_vu,ten_dich_vu,dien_tich,chi_phi_thue,so_nguoi_toi_da,tieu_chuan_phong,mo_ta_tien_nghi_khac,dien_tich_ho_boi,so_tang,ma_kieu_thue,ma_loai_dich_vu)
+value (1,"Villa Beach Front",25000,10000000,10,"vip","Có hồ bơi",500,	4,3,1),
+(2,"House Princess 01",14000,5000000,7,"vip","Có thêm bếp nướng",null,3,2,2),
+(3,"Room Twin 01",5000,1000000,2,"normal","Có tivi",null,null,4,3),
+(4,"Villa No Beach Front",22000,9000000,8,"normal","Có hồ bơi",300,3,3,1),
+(5,"House Princess 02",10000,4000000,5,"normal","Có thêm bếp nướng",null,2,3,2),
+(6,"Room Twin 02",3000,900000,2,"normal","Có tivi",null,null,4,3)
+;
+select * from vi_tri;
+select * from trinh_do;
+select * from bo_phan;
+select * from nhan_vien;
+select * from khach_hang;
+select * from kieu_thue;
+select * from loai_dich_vu;
+select * from dich_vu;
+select * from dich_vu_di_kem;
+select * from hop_dong;
+select * from hop_dong_chi_tiet;
+select * from loai_khach;
+-- ----- bài 1-----
+select *
+from nhan_vien
+where ho_va_ten like "H%" or ho_va_ten like "T%" or ho_va_ten like "K%" and char_length(ho_va_ten)<=15;
+-- -------bài 2--------
+select * 
+from khach_hang 
+where dia_chi like "ĐàNẵng%" or dia_chi like "QuảngTrị%";
