@@ -174,11 +174,37 @@ select * from dich_vu_di_kem;
 select * from hop_dong;
 select * from hop_dong_chi_tiet;
 select * from loai_khach;
--- ----- bài 1-----
+-- ----- bài 2-----
 select *
 from nhan_vien
 where ho_va_ten like "H%" or ho_va_ten like "T%" or ho_va_ten like "K%" and char_length(ho_va_ten)<=15;
--- -------bài 2--------
+-- -------bài 3--------
 select * 
 from khach_hang 
-where dia_chi like "ĐàNẵng%" or dia_chi like "QuảngTrị%";
+where ( TIMESTAMPDIFF(year,khach_hang.ngay_sinh,curtime())>=18
+ and (TIMESTAMPDIFF(year,khach_hang.ngay_sinh,curtime()) <=50)) and dia_chi like "%Đà Nẵng%" or dia_chi like "%Quảng Trị%";
+
+-- --------------bai 4 -------------
+select kh.ma_khach_hang, kh.ho_ten,count(kh.ma_khach_hang) as "Số lần đặt"
+from loai_khach lk
+join khach_hang kh
+on kh.ma_loai_khach=lk.ma_loai_khach
+join  hop_dong hd
+on hd.ma_khach_hang=kh.ma_khach_hang
+join dich_vu dv
+on dv.ma_dich_vu=hd.ma_dich_vu
+where lk.ten_loai_khach="Diamond"
+group by kh.ma_khach_hang
+order by count(kh.ma_khach_hang) asc;
+-- -----------------bai 5------------------
+select kh.ma_khach_hang,kh.ho_ten,kh.ho_ten,hd.ma_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,(dv.chi_phi_thue*hdct.so_luong+dv.chi_phi_thue) as "tổng tiền"
+from khach_hang kh
+join hop_dong hd
+on kh.ma_khach_hang=hd.ma_khach_hang
+join hop_dong_chi_tiet hdct
+on  hd.ma_hop_dong=hdct.ma_hop_dong
+join dich_vu dv
+on hd.ma_dich_vu=dv.ma_dich_vu
+order by kh.ma_khach_hang
+
+
