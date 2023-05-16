@@ -1,26 +1,27 @@
 create database bai_tap_2;
 use bai_tap_2;
+
 create table customer(
-cid int primary key,
-cName varchar(20),
-cage int
+c_id int primary key,
+c_Name varchar(20),
+c_age int
 );
 create table `order`(
-oid int primary key,
-cid int,
-foreign key (cid)references customer(cid),
-odate date,
-ototalprice double
+o_id int primary key,
+c_id int,
+foreign key (c_id)references customer(c_id),
+o_date date,
+o_total_price double
 );
 create table product (
-pid int primary key,
-pname varchar(20),
-pPrice double
+p_id int primary key,
+p_name varchar(20),
+p_Price double
 );
-create table orderdetail(
-oid int,
-pid int,
-primary key(oid,pid),
-odQty varchar(30)
+create table order_detail(
+o_id int,
+p_id int,
+primary key(o_id,p_id),
+o_d_Qty varchar(30)
 );
 	

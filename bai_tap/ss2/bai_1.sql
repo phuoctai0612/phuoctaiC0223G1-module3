@@ -1,55 +1,56 @@
 create database bai_tap_1;
 use bai_tap_1;
-create table phieuxuat(
-sopx int primary key,
-ngayxuat date
+drop database bai_tap_1;
+create table phieu_xuat(
+so_px int primary key,
+ngay_xuat date
 );
-create table vattu(
-mavtu int primary key,
-tenvtu varchar(20)
+create table vat_tu(
+ma_vtu int primary key,
+ten_vtu varchar(20)
 );
-create table phieuxuat_vattu(
-dgxuat int ,
-slxuat int ,
-sopx int,
-mavtu int,
-primary key(sopx,mavtu),
-foreign key (sopx) references phieuxuat(sopx),
-foreign key (mavtu) references vattu(mavtu)
+create table phieu_xuat_vat_tu(
+dg_xuat int ,
+sl_xuat int ,
+so_px int,
+ma_vtu int,
+primary key(so_px,ma_vtu),
+foreign key (so_px) references phieu_xuat(so_px),
+foreign key (ma_vtu) references vat_tu(ma_vtu)
 );
 
-create table phieunhap(
-sopn int primary key,
-ngaynhap date
+create table phieu_nhap(
+so_pn int primary key,
+ngay_nhap date
 );
-create table vattu_phieunhap(
-dgnhap int,
-slnhap int,
-mavtu int,
-sopn int,
-primary key(mavtu,sopn),
-foreign key (mavtu)references vattu(mavtu),
-foreign key (sopn)references phieunhap(sopn)
+create table vat_tu_phieu_nhap(
+dg_nhap int,
+sl_nhap int,
+ma_vtu int,
+so_pn int,
+primary key(ma_vtu,so_pn),
+foreign key (ma_vtu)references vat_tu(ma_vtu),
+foreign key (so_pn)references phieu_nhap(so_pn)
 );
-create table dondh(
-sodh int primary key,
-ngaydh date
+create table don_dh(
+so_dh int primary key,
+ngay_dh date
 );
-create table nhacc(
-mancc int primary key,
-tenncc varchar(30),
-diachi varchar(50)
+create table nha_cc(
+ma_ncc int primary key,
+ten_ncc varchar(30),
+dia_chi varchar(50)
 );
-create table dondh_vattu(
-sodh int,
-mavtu int,
-mancc int,
-primary key(sodh,mavtu),
-foreign key (sodh)references dondh(sodh),
-foreign key (mavtu)references vattu(mavtu),
-foreign key (mancc)references nhacc(mancc)
+create table don_dh_vat_tu(
+so_dh int,
+ma_vtu int,
+ma_ncc int,
+primary key(so_dh,ma_vtu),
+foreign key (so_dh)references don_dh(so_dh),
+foreign key (ma_vtu)references vat_tu(ma_vtu),
+foreign key (ma_ncc)references nha_cc(ma_ncc)
 );
 create table sdt(
-mancc int, foreign key (mancc)references nhacc(mancc),
+ma_ncc int, foreign key (ma_ncc)references nha_cc(ma_ncc),
 sdt varchar(13)
 );
