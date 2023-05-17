@@ -197,14 +197,17 @@ where lk.ten_loai_khach="Diamond"
 group by kh.ma_khach_hang
 order by count(kh.ma_khach_hang) asc;
 -- -----------------bai 5------------------
-select kh.ma_khach_hang,kh.ho_ten,kh.ho_ten,hd.ma_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,(dv.chi_phi_thue*hdct.so_luong+dv.chi_phi_thue) as "tổng tiền"
+select kh.ma_khach_hang,kh.ho_ten,lk.ten_loai_khach,hd.ma_hop_dong,dv.ten_dich_vu,
+hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,(dv.chi_phi_thue*hdct.so_luong+dv.chi_phi_thue) as "tổng tiền"
 from khach_hang kh
-join hop_dong hd
+left join hop_dong hd
 on kh.ma_khach_hang=hd.ma_khach_hang
-join hop_dong_chi_tiet hdct
+left join hop_dong_chi_tiet hdct
 on  hd.ma_hop_dong=hdct.ma_hop_dong
-join dich_vu dv
+left join dich_vu dv
 on hd.ma_dich_vu=dv.ma_dich_vu
+left join loai_khach lk
+on lk.ma_loai_khach=kh.ma_loai_khach
 order by kh.ma_khach_hang
 
 
