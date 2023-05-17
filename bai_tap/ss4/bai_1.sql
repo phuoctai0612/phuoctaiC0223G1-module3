@@ -68,6 +68,6 @@ limit 1;
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
 select bang_student.student_name,avg(bang_mark.mark)
 from bang_student
-join bang_mark
+left join bang_mark
 on bang_student.student_id=bang_mark.student_id
 group by bang_student.student_id
