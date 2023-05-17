@@ -1,6 +1,6 @@
-create database bai_tap_2;
-use bai_tap_2;
-
+create database quan_ly_don_hang_2;
+use quan_ly_don_hang_2;
+drop database bai_tap_2;
 create table customer(
 c_id int primary key,
 c_Name varchar(20),

@@ -1,5 +1,5 @@
-create database bai_tap_1;
-use bai_tap_1;
+create database quan_ly_don_hang;
+use quan_ly_don_hang;
 drop database bai_tap_1;
 create table phieu_xuat(
 so_px int primary key,

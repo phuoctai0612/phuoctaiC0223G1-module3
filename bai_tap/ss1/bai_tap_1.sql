@@ -1,5 +1,5 @@
-create database ss1 ;
-use ss1;
+create database hoc_sinh_giao_vien ;
+use hoc_sinh_giao_vien ;
 create table table1 (
       id int primary key auto_increment ,
       nameStudent varchar(45)
