@@ -298,7 +298,7 @@ group by hd.ma_hop_dong;
  -- ten_dich_vu, so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem), 
  -- tien_dat_coc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2020 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
  
- select hd.ma_hop_dong,nv.ho_va_ten,kh.ho_ten,kh.so_dien_thoai,dv.ma_dich_vu,dv.ten_dich_vu,hd.ngay_lam_hop_dong
+ select hd.ma_hop_dong,nv.ho_va_ten,kh.ho_ten,kh.so_dien_thoai,dv.ma_dich_vu,dv.ten_dich_vu,hd.ngay_lam_hop_dong,ifnull(sum(hdct.so_luong),0)
  from hop_dong hd
  join nhan_vien nv
  on hd.ma_nhan_vien=nv.ma_nhan_vien
@@ -306,9 +306,9 @@ group by hd.ma_hop_dong;
  on kh.ma_khach_hang=hd.ma_khach_hang
  join dich_vu dv
  on dv.ma_dich_vu=hd.ma_dich_vu
+ join hop_dong
  left join hop_dong_chi_tiet hdct
  on hdct.ma_hop_dong=hd.ma_hop_dong
-
  where (quarter(hd.ngay_lam_hop_dong) =4 and year(hd.ngay_lam_hop_dong)=2020) and hd.ma_hop_dong not in (
  select hop_dong.ma_hop_dong
  from hop_dong
@@ -478,10 +478,46 @@ call sp_xoa_khach_hang(1);
 -- phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
 
 delimiter //
-create procedure sp_them_moi_hop_dong (ma_hop_dong int, ngay_lam_hop_dong datetime, ngay_ket_thuc datetime, tien_dat_coc double, ma_nhan_vien int, ma_khach_hang int, ma_dich_vu int)
+create procedure sp_them_moi_hop_dong (p_ma_hop_dong int,p_ngay_lam_hop_dong datetime,
+ p_ngay_ket_thuc datetime, p_tien_dat_coc double, p_ma_nhan_vien int, p_ma_khach_hang int, p_ma_dich_vu int)
 begin 
-insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu) 
+if sp_them_moi_hop_dong.p_ma_hop_dong 
+not in(select ma_hop_dong from hop_dong)
+then
+insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
 value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
-
+else 
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
+end if;
+if sp_them_moi_hop_dong.p_ma_nhan_vien
+in (select ma_nhan_vien from nhan_vien)
+then
+insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
+else
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
+end if;
+if sp_them_moi_hop_dong.p_ma_khach_hang
+in (select ma_khach_hang from khach_hang)
+then
+insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
+else
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
+end if;
+if sp_them_moi_hop_dong.p_ma_dich_vu
+in (select ma_dich_vu from dich_vu)
+then
+insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
+else
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
+end if;
 end //
 delimiter //
+
+call sp_them_moi_hop_dong(1,20201208,20201208,0,3,1,3);
