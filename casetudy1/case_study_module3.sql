@@ -484,30 +484,12 @@ begin
 if sp_them_moi_hop_dong.p_ma_hop_dong 
 not in(select ma_hop_dong from hop_dong)
 then
-insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
-value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
-else 
-SIGNAL SQLSTATE '01000'
-      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
-end if;
 if sp_them_moi_hop_dong.p_ma_nhan_vien
 in (select ma_nhan_vien from nhan_vien)
 then
-insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
-value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
-else
-SIGNAL SQLSTATE '01000'
-      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
-end if;
 if sp_them_moi_hop_dong.p_ma_khach_hang
 in (select ma_khach_hang from khach_hang)
 then
-insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
-value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
-else
-SIGNAL SQLSTATE '01000'
-      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
-end if;
 if sp_them_moi_hop_dong.p_ma_dich_vu
 in (select ma_dich_vu from dich_vu)
 then
@@ -517,6 +499,21 @@ else
 SIGNAL SQLSTATE '01000'
       SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
 end if;
+else
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
+end if;
+else
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
+end if;
+else 
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
+end if;
+
+
+
 end //
 delimiter //
 
