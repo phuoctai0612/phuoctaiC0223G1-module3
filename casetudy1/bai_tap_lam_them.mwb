@@ -1,0 +1,51 @@
+create database quan_ly_may_tinh;
+use quan_ly_may_tinh;
+drop database quan_ly_may_tinh;
+create table loai_computer(
+id_loai_computer int primary key auto_increment,
+ten_loai_computer varchar(25),
+gia_loai_computer int
+);
+create table computer(
+id_computer int primary key auto_increment,
+hang_san_xuat varchar(25),
+vi_tri_dat_may int,
+id_loai_computer int,
+foreign key (id_loai_computer) references loai_computer(id_loai_computer)
+);
+create table loai_khach_hang(
+id_loai_khach_hang int primary key auto_increment,
+ten_loai_khach_hang varchar(25)
+);
+create table khach_hang(
+id_khach_hang int primary key auto_increment,
+cccd varchar(14),
+ten_khach_hang varchar(25),
+sdt_khach_hang varchar(25),
+email_khach_hang varchar(25),
+id_loai_khach_hang int ,
+foreign key (id_loai_khach_hang) references loai_khach_hang(id_loai_khach_hang)
+);
+create table dich_vu_di_kem(
+id_dich_vu_di_kem int primary key auto_increment,
+ten_dich_vu_di_kem varchar(25),
+gia_dich_vu_di_kem int
+);
+create table dich_vu(
+id_dich_vu int primary key auto_increment,
+id_computer int,
+id_khach_hang int,
+foreign key (id_computer)references computer(id_computer),
+foreign key (id_khach_hang)references khach_hang(id_khach_hang),
+thoi_gian_bat_dau datetime,
+thoi_gian_ket_thuc datetime,
+id_dich_vu_di_kem int 
+);
+create table hop_dong_chi_tiet(
+id_hop_dong_chi_tiet int primary key auto_increment,
+id_dich_vu_di_kem int,
+id_dich_vu int,
+foreign key (id_dich_vu_di_kem)references dich_vu_di_kem(id_dich_vu_di_kem),
+foreign key (id_dich_vu)references dich_vu(id_dich_vu),
+so_luong int
+);

@@ -442,6 +442,8 @@ where year(hd.ngay_lam_hop_dong) = 2020
 group by dvdk.ma_dich_vu_di_kem
 having sum(hdct.so_luong)>10)as a
 );
+select * 
+from dich_vu_di_kem;
 -- 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,
 -- thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
 select nv.ma_nhan_vien,nv.ho_va_ten,nv.email,nv.so_dien_thoai,nv.ngay_sinh,nv.dia_chi
@@ -470,51 +472,74 @@ where dia_chi like "%Đà Nẵng%"
 delimiter //
 create procedure sp_xoa_khach_hang (p_ma_khach_hang int) 
 begin
-delete from khach_hang where ma_khach_hang=p_ma_khach_hang;
+delete 
+from khach_hang 
+where ma_khach_hang=p_ma_khach_hang;
 end //
 delimiter // ;
 call sp_xoa_khach_hang(1);
 -- 24.	Tạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong với yêu cầu sp_them_moi_hop_dong
 -- phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
-
 delimiter //
 create procedure sp_them_moi_hop_dong (p_ma_hop_dong int,p_ngay_lam_hop_dong datetime,
  p_ngay_ket_thuc datetime, p_tien_dat_coc double, p_ma_nhan_vien int, p_ma_khach_hang int, p_ma_dich_vu int)
 begin 
 if sp_them_moi_hop_dong.p_ma_hop_dong 
-not in(select ma_hop_dong from hop_dong)
+in(select ma_hop_dong from hop_dong)
 then
-if sp_them_moi_hop_dong.p_ma_nhan_vien
-in (select ma_nhan_vien from nhan_vien)
-then
-if sp_them_moi_hop_dong.p_ma_khach_hang
-in (select ma_khach_hang from khach_hang)
-then
-if sp_them_moi_hop_dong.p_ma_dich_vu
-in (select ma_dich_vu from dich_vu)
-then
+SIGNAL SQLSTATE '01000'
+      SET MESSAGE_TEXT = 'đã có mã hợp đồng này', MYSQL_ERRNO = 1000;
+end if;
 insert into hop_dong(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
 value(ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
-else
-SIGNAL SQLSTATE '01000'
-      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
-end if;
-else
-SIGNAL SQLSTATE '01000'
-      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
-end if;
-else
-SIGNAL SQLSTATE '01000'
-      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
-end if;
-else 
-SIGNAL SQLSTATE '01000'
-      SET MESSAGE_TEXT = 'A warning occurred', MYSQL_ERRNO = 1000;
-end if;
-
-
-
 end //
 delimiter //
 
 call sp_them_moi_hop_dong(1,20201208,20201208,0,3,1,3);
+-- 25.	Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong thì
+-- hiển thị tổng số lượng bản ghi còn lại có trong bảng hop_dong ra giao diện console của database.
+create table history_tr_xoa_hop_dong(
+id_hop_dong int primary key auto_increment,
+d_ma_hop_dong int,
+ngay_xoa datetime not null
+);
+
+delimiter //
+create trigger tr_xoa_hop_dong
+after delete 
+on hop_dong for each row 
+begin
+insert into history_tr_xoa_hop_dong(d_ma_hop_dong,ngay_xoa)
+value (old.ma_hop_dong,now());
+end // 
+delimiter // ;
+select * 
+from history_tr_xoa_hop_dong;
+delete from hop_dong
+where ma_hop_dong=3;
+
+select * 
+from nhan_vien
+where substring(substring_index(ho_va_ten," ",-1),1,1)  = "d" or substring(substring_index(ho_va_ten," ",-1),1,1)  = "a"
+or substring(substring_index(ho_va_ten," ",-1),1,1)  = "y"or substring(substring_index(ho_va_ten," ",-1),1,1)  = "n"
+order by substring_index(ho_va_ten," ",-1);
+
+-- 25.	Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong thì hiển thị 
+-- tổng số lượng bản ghi còn lại có trong bảng hop_dong ra giao diện console của database.
+create table history_tr_xoa_hop_dong_1(
+id_hop_dong int primary key auto_increment,
+d_ma_hop_dong int
+);
+delimiter //
+create trigger tr_xoa_hop_dong_1
+after delete 
+on hop_dong
+for each row 
+begin
+declare dem_so int;
+insert  into  tr_xoa_hop_dong_1(d_ma_hop_dong)
+value(dem_so);
+set dem_so = count(hop_dong.ma_hop_dong)
+;
+end //
+delimiter // ;
