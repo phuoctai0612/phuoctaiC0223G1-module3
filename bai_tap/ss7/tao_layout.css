@@ -59,7 +59,7 @@
     text-align: right;
 
 }
-#col1-row1 {
+.letrai {
     background: gainsboro;
     float: left;
     height: 620px;
@@ -95,7 +95,7 @@ border: 1px solid black;
     padding-top: 35px;
 }
 
-#content {
+.content {
     box-sizing: border-box;
     float: left;
     background: white;
@@ -104,7 +104,7 @@ border: 1px solid black;
     padding-left: 20px;
 }
 
-#col1-row2 {
+.lephai {
     background: gainsboro;
     float: right;
     height: 620px;
@@ -114,7 +114,7 @@ border: 1px solid black;
 
 }
 
-#col2-row1 {
+.cuoidong {
     text-align: center;
     width: 100%;
     color: #CDCDCD;
