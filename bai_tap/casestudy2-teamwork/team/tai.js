@@ -1,0 +1,1 @@
+dangki.addEventListener(onclick())

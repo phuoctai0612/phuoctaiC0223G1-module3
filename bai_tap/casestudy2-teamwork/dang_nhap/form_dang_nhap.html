@@ -2,28 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng kí tài khoản</title>
+    <title>Đăng nhập tài khoản</title>
     <link rel="stylesheet" href="../../../bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', sans-serif;
+            background: rgb(152, 95, 124);
+            background: -moz-linear-gradient(-45deg, rgb(182, 120, 151) 0%, rgb(203, 116, 116) 100%);
+            background: -webkit-linear-gradient(-45deg, rgb(196, 105, 151) 0%, rgb(190, 63, 127) 100%);
+            background: linear-gradient(135deg, rgb(126, 79, 103) 0%, rgb(152, 112, 112) 100%);
+        }
 
+    </style>
 </head>
-<body>
+<body style="border-color: #1a1e21">
 <div>
-    <div class="container">
-    <div class="row justify-content-around ">
-        <form action="" class="col-md-6 bg-light p-3 my-3">
-            <h1 class="text-uppercase text-center h3 py-3">Đăng kí tài khoản</h1>
-            <div class="form-group">
-                <label for="ho_va_ten"> Tài khoản</label>
-                <input type="text" id="ho_va_ten" class="form-control container"style="border-radius: 60px" >
-                   <label for="mat_khau"> Mật khẩu</label>
-                <input type="text" id="mat_khau" class="form-control container"style="border-radius: 60px" >
+    <div class="container ele gr-to-top-right ">
+        <div class="row justify-content-around logo">
+            <img style="width: 15%;border-radius: 50%"
+                 src="https://th.bing.com/th?id=OIP.Jbkv8p-kLDcKv8DBz9FKlQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                 alt="">
+        </div>
+        <div class="row ">
+            <img style="width: 13%;border-radius: 50%;position: absolute"
+                 src="https://th.bing.com/th?id=OIP.Jbkv8p-kLDcKv8DBz9FKlQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                 alt="">
+        </div>
+        <div class="row justify-content-around ">
+            <form action="" class="col-md-6 bg-light p-3 my-3"
+                  style="border-radius: 10px;box-shadow: 6px 6px 6px 6px #171515; position: relative;background: transparent">
+                <h1 class="text-uppercase text-center h3 py-3">Đăng nhập nhân viên</h1>
+                <div class="form-group" style="margin-top: 20px">
+                    <label for="ho_va_ten"><i class="fa-solid fa-circle-user"></i> Tài khoản</label>
+                    <input type="text" id="ho_va_ten" class="form-control container" style="border-radius: 60px">
+                </div>
+                <div class="form-group " style="margin-top: 20px">
+                    <label for="mat_khau"><i class="fa-solid fa-lock"></i> Mật khẩu</label>
+                    <input type="password" id="mat_khau" class="form-control container" style="border-radius: 60px">
+                </div>
+                <div style="margin-top: 20px">
+                    <input type="submit" value="Đăng nhập" class="btn-primary form-control container"
+                           style="background: red">
+                </div>
 
-            </div>
-        </form>
-    </div>
+                <div style="margin-top: 20px">
+                    <input type="submit" value="Đăng nhập quản lý" class="btn-primary form-control container">
+                </div>
+                <div style="margin-top: 20px">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">Lưu tài khoản</label>
+                </div>
+                <div style="margin-top: 20px">
+                    <span>Bạn chưa có tài khoản ? Đăng kí <a href="#">Tại đây</a></span>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
 <script src="../../../bootstrap-5.1.3-dist/js/bootstrap.js"></script>
 </body>
 </html>

@@ -28,11 +28,11 @@ public class TuDienServlet extends HttpServlet {
         String result =stringMap.get(search);
         if (result!=null){
             request.setAttribute("ketqua1", result);
-            RequestDispatcher r=request.getRequestDispatcher("tu_dien/ket_qua_product.jsp");
+            RequestDispatcher r=request.getRequestDispatcher("tu_dien/ket_qua.jsp");
             r.forward(request,response);
         }else {
             request.setAttribute("ketqua1","Không tìm thấy");
-            RequestDispatcher r=request.getRequestDispatcher("tu_dien/ket_qua_product.jsp");
+            RequestDispatcher r=request.getRequestDispatcher("tu_dien/ket_qua.jsp");
             r.forward(request,response);
         }
     }

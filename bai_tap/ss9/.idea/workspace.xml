@@ -5,48 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0689787e-5e03-4dd9-b72a-f7aefa4358ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/dang_nhap_quan_ly.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/form_dang_ki.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/form_dang_nhap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/danh_sach_don_hang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/thien.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss8/casestudy.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss8/casestudy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss9/ChuyenDoiTienTeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss9/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss9/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ss9/TuDienServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/chuyen_doi_tien_te/trang_chu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/chuyen_doi_tien_te/trang_ket_qua.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/product/ket_qua.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/product/trang_chu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/tu_dien/ket_qua.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/tu_dien/tu_dien.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/ss8/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/ss8/test1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/dang_ki.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/dang_ki.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/Screenshot 2023-05-29 093831.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/giao_dien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/giao_dien_chinh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/â.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_1/DanhSachKhachHangServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_1/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_1/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_1/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_1/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_1/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_1/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/java/com/example/ss10/bai_tap_2/MayTinhServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/webapp/ss10_jsp/bai_tap_1/danh-sach-khach-hang.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/webapp/ss10_jsp/bai_tap_1/table-customer-edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/webapp/ss10_jsp/bai_tap_1/table-customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/webapp/ss10_jsp/bai_tap_2/ket-qua.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10/src/main/webapp/ss10_jsp/bai_tap_2/may-tinh.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/dang_nhap_quan_ly.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/dang_nhap_quan_ly.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/form_dang_ki.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/form_dang_ki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/form_dang_nhap.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/dang_nhap/form_dang_nhap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/danh_sach_don_hang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/danh_sach_don_hang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.css" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.js" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/tai.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/team/thien.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/team/thien.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss8/bai_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8/bai_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8/casestudy.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8/casestudy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss8/casestudy.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8/casestudy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/ss9/TuDienServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/ss9/TuDienServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/ss9-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/ss9-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss9/TuDienServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss9/TuDienServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/tu_dien/ket_qua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/tu_dien/ket_qua.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/ss8/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/ss8/test.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../thuc_hanh/ss8/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/ss8/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/ss8/test1.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/ss8/test1.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/codegymmodule3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -100,18 +104,17 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.751" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.75" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
-      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+    <configuration name="Tomcat 9.0.751" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.751" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : com.example : ss9-1.0-SNAPSHOT.war">
           <settings>
-            <option name="CONTEXT_PATH" value="/Gradle___com_example___ss9_1_0_SNAPSHOT_war" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="bdca4ff7-5ef2-444a-ac58-11b52c8318d4" />
+        <option name="BASE_DIRECTORY_NAME" value="0d67a7e1-690f-4aab-be72-3c86887fb952" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -119,7 +122,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="56175" />
+        <option name="DEBUG_PORT" value="56400" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -183,6 +186,10 @@
       <option name="presentableId" value="Default" />
       <updated>1685351680170</updated>
       <workItem from="1685351681489" duration="1216000" />
+      <workItem from="1685353196166" duration="472000" />
+      <workItem from="1685409459458" duration="673000" />
+      <workItem from="1685424103566" duration="88000" />
+      <workItem from="1685439511977" duration="121000" />
     </task>
     <servers />
   </component>
@@ -199,5 +206,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

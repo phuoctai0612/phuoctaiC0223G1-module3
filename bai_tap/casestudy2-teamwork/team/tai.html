@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="tai.css">
 </head>
 <body>
-$END$
+<div class="background"></div>
+<div class="container">
+    <div class="viettext"></div>
+    <div class="giaodien">
+        <div class="form-box dangnhap">
+            <form action="#">
+                <h2>Đăng nhập</h2>
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="text">
+                    <label>Tài khoản</label>
+                </div>
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="password">
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="ghinho">
+                    <label>
+                        <input type="checkbox">Lưu tài khoản
+                    </label>
+                </div>
+                <button type="submit" class="nutdangnhap">
+                    Đăng nhập
+                </button>
+                <div class="dangki">
+                    <p>Bạn chưa có tài khoản ? Đăng kí <a href="#" class="chuyensangdangki">Tại đây</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box dangki">
+            <form action="#">
+                <h2>Đăng kí</h2>
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="text">
+                    <label>Tài khoản</label>
+                </div>
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="password">
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="input">
+                    <span class="icon"></span>
+                    <input type="password">
+                    <label>Mật khẩu 2</label>
+                </div>
+
+                <button type="submit" class="nutdangnhap">
+                    Đăng kí
+                </button>
+                <div class="dangki" id="dangki">
+                    <p>Chuyển sang đăng nhập <a href="#" class="chuyensangdangnhap">Tại đây</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    // let giaodien=document.querySelector('.giaodien');
+    // let dangnhap=document.querySelector('.dangnhap');
+    // let dangki=document.querySelector('.dangki');
+    const dangki=document.getElementById("dangki").onclick=function (){
+
+    }
+</script>
 </body>
 </html>
