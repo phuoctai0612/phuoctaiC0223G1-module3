@@ -39,5 +39,6 @@
         </tr>
     </c:forEach>
 </table>
+<button><a href="/product-servlet?action=timTenSanPham">Tìm tên sản phẩm</a></button>
 </body>
 </html>

@@ -3,6 +3,8 @@ package service;
 import model.Product;
 import repository.IProductRepository;
 import repository.ProductRepository;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductService implements IProductService {
@@ -25,6 +27,12 @@ public class ProductService implements IProductService {
 
     @Override
     public void xoaProduct(int id) {
-       productRepository.xoaProduct(id);
+       productRepository.deleteProduct(id);
+    }
+
+    @Override
+    public List<Product> findNameProduct(String name) {
+        List<Product> list=productRepository.findNameProduct(name);
+        return list;
     }
 }

@@ -30,19 +30,32 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public void eidtProduct(int id, Product product) {
-        for (int i = 0; i < productList.size(); i++) {
-            if (productList.get(i).getId()==id){
-                productList.set(i,product);
-            }
-        }
+                productList.set(findId(id),product);
     }
 
     @Override
-    public void xoaProduct(int id) {
+    public void deleteProduct(int id) {
+                productList.remove(findId(id));
+    }
+
+    @Override
+    public int findId(int id) {
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getId()==id){
-                productList.remove(i);
+                return i;
             }
         }
+        return -1;
+    }
+
+    @Override
+    public List<Product> findNameProduct(String name) {
+        List<Product> list=new ArrayList<>();
+        for (int i = 0; i <productList.size() ; i++) {
+            if (productList.get(i).getNameProduct().contains(name)){
+                list.add(productList.get(i));
+            }
+        }
+        return list;
     }
 }

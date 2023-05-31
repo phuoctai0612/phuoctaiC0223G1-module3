@@ -5,60 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0689787e-5e03-4dd9-b72a-f7aefa4358ea" name="Changes" comment="e sửa bài tập">
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/120502-and-cake-the-masha-bear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/146915-cake-creamy-piece-free-hq-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/158508-butter-cookie-chocolate-free-download-png-hd_400x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/159089-dark-cake-chocolate-free-transparent-image-hq_600x600.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/159118-dark-cookie-chocolate-download-free-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/28767-2-cookies-transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/66-red-apple-png-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/image_720.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/gio_hang/gio_hang.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/gio_hang/gio_hang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/controller/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss10_2/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/download.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/about_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/chose1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/chose2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/chose3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/clint.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/logo_footer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/menu_btn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/prot1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/prot2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/prot3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/prot4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/we1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/we2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/hightech-html/images/we3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_2/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_2/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_2/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_2/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_2/ss10_2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss8/bai_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss8/bai_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss9/ChuyenDoiTienTeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss9/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss9/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ss9/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ss9/TuDienServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/chuyen_doi_tien_te/trang_chu.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/chuyen_doi_tien_te/trang_ket_qua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/webapp/customer/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/product/trang_chu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product/trang_chu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/tu_dien/ket_qua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/webapp/customer/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/tu_dien/tu_dien.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/Thiết kế chưa có tên.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/webapp/hien-thi-san-pham-theo-ten.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/webapp/tim-san-pham-chi-tiet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/danh_sach_don_hang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/danh_sach_don_hang/danh_sach_don_hang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/giao_dien/giao_dien.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/gio_hang/gio_hang.css" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/gio_hang/gio_hang.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy2-teamwork/gio_hang/gio_hang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy2-teamwork/gio_hang/gio_hang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/repository/IProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/repository/IProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/build/classes/java/main/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/build/libs/s11_bai_tap_1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/build/libs/s11_bai_tap_1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/java/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/webapp/hien-thi-danh-sach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../s11_bai_tap_1/src/main/webapp/hien-thi-danh-sach.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +172,9 @@
       <workItem from="1685424103566" duration="88000" />
       <workItem from="1685439511977" duration="121000" />
       <workItem from="1685509461698" duration="216000" />
+      <workItem from="1685546730537" duration="13000" />
+      <workItem from="1685546793150" duration="6000" />
+      <workItem from="1685546865742" duration="437000" />
     </task>
     <servers />
   </component>

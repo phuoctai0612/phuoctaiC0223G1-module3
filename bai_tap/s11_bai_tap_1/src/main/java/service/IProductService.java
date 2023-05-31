@@ -10,4 +10,5 @@ public interface IProductService {
     void addNewProduct(Product product);
     void eidtProduct(int id,Product product);
     void xoaProduct(int id);
+    List<Product> findNameProduct(String name);
 }
