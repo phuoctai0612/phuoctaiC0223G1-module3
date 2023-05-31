@@ -45,7 +45,7 @@ public class ProductRepository implements IProductRepository {
                 return i;
             }
         }
-        return -1;
+        return -2;
     }
 
     @Override
