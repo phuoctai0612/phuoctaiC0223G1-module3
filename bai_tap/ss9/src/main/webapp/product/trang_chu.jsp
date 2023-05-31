@@ -11,7 +11,7 @@
     <title>Product Discount Calculator</title>
 </head>
 <body>
-<form action="/ProductServlet" method="post">
+<form action="/product-servlet" method="post">
     <fieldset style="width: 500px"></fieldset>
     <legend>Product Description</legend>
     <input type="text" name="product">

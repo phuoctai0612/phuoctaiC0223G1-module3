@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-<form action="/CustomerServlet" method="get">
+<form action="/customer-servlet" method="get">
     <table >
         <tr style="text-align: center;">
             <td >STT</td>
@@ -34,20 +34,20 @@
             <td>Xóa</td>
             <td>Sửa</td>
         </tr>
-        <c:forEach items="${list}" var="c" varStatus="loop">
+        <c:forEach items="${list}" var="customer" varStatus="loop">
             <tr style="text-align: center;">
                 <td>
                     <c:out value="${loop.count}"/>
                 </td>
                 <td>
-                    <c:out value="${c.name}"/>
+                    <c:out value="${customer.name}"/>
                 </td>
                 <td>
-                    <c:out value="${c.dayOfBirth}"/>
+                    <c:out value="${customer.dayOfBirth}"/>
                 </td>
-                <td><c:out value="${c.address}"/></td>
+                <td><c:out value="${customer.address}"/></td>
                 <td>
-                    <img style="width: 150px;height: 150px;" src=" <c:out value="${c.img}"/>"
+                    <img style="width: 150px;height: 150px;" src=" <c:out value="${customer.img}"/>"
                          alt="">
                 </td>
                 <td><a href="/CustomerServlet?action=delete"><i class="fa-sharp fa-solid fa-trash">Xoa</i></a></td>

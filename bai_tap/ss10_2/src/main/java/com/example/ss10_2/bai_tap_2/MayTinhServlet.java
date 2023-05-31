@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "MayTinhServlet", value = "/MayTinhServlet")
+@WebServlet(name = "MayTinhServlet", value = "/may-tinh-servlet")
 public class MayTinhServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,7 +32,7 @@ public class MayTinhServlet extends HttpServlet {
                     ketqua=Double.parseDouble(num1)/Double.parseDouble(num2);
                     break;
             }
-            request.setAttribute("ketqua",ketqua);
+            request.setAttribute("ketQua",ketqua);
             request.getRequestDispatcher("ss10_jsp/bai_tap_2/ket-qua.jsp").forward(request,response);
     }
 

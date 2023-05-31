@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/MayTinhServlet" method="get">
+<form action="/may-tinh-servlet" method="get">
     <h1>Máy tính đơn giản</h1>
     <br>
     <fieldset style="width: 400px">
