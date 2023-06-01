@@ -8,7 +8,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/product-servlet")
@@ -33,31 +32,26 @@ public class ProductServlet extends HttpServlet {
             case "suaDanhSach":
                 suaProduct(request, response);
                 break;
-            case "timTenSanPham":
-                timTenSanPham(request, response);
             default:
                 List<Product> list = iProductService.display();
                 request.setAttribute("list", list);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("hien-thi-danh-sach.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("list.jsp");
                 dispatcher.forward(request, response);
         }
     }
 
-    private void timTenSanPham(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher2 = request.getRequestDispatcher("tim-san-pham-chi-tiet.jsp");
-        dispatcher2.forward(request, response);
-    }
+
 
     private void suaProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         request.setAttribute("id", id);
-        request.getRequestDispatcher("sua-danh-sach.jsp").forward(request, response);
-        response.sendRedirect("sua-danh-sach.jsp");
+        request.getRequestDispatcher("edit.jsp").forward(request, response);
+        response.sendRedirect("edit.jsp");
     }
 
 
     private void themMoiProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("them-danh-sach.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("create.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -71,8 +65,6 @@ public class ProductServlet extends HttpServlet {
         switch (action) {
             case "themMoi":
                 themMoiProduct1(request, response);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("them-danh-sach.jsp");
-                dispatcher.forward(request, response);
                 break;
             case "suaDanhSach":
                 suaProduct1(request, response);
@@ -88,16 +80,9 @@ public class ProductServlet extends HttpServlet {
     private void timKiemSanPham(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("nameProduct");
         List<Product> list = iProductService.findNameProduct(name);
-        if (list.size()==0){
-           request.setAttribute("list",0);
-            RequestDispatcher dispatcher1= request.getRequestDispatcher("hien-thi-san-pham-theo-ten.jsp");
-            dispatcher1.forward(request, response);
-        }else {
-            request.setAttribute("list", list);
-            RequestDispatcher dispatcher1= request.getRequestDispatcher("hien-thi-san-pham-theo-ten.jsp");
-            dispatcher1.forward(request, response);
-        }
-
+        request.setAttribute("list", list);
+        RequestDispatcher dispatcher1= request.getRequestDispatcher("list.jsp");
+        dispatcher1.forward(request, response);
     }
 
 

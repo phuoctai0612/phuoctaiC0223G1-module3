@@ -15,6 +15,13 @@
 <a href="/product-servlet?action=themMoi">
     <p>Thêm mới danh sách</p>
 </a>
+<form action="/product-servlet?action=timTenSanPham" method="post">
+    <button>Tìm tên sản phẩm</button>
+    <input type="text" name="nameProduct" placeholder="Nhập tên sản phẩm">
+    <input type="submit" value="Search">
+
+</form>
+
 <table>
     <tr>
         <th>STT</th>
@@ -39,6 +46,6 @@
         </tr>
     </c:forEach>
 </table>
-<button><a href="/product-servlet?action=timTenSanPham">Tìm tên sản phẩm</a></button>
+
 </body>
 </html>
