@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO implements IUserDAO {
-    private String jdbcURL = "jdbc:mysql://localhost:3306/demo";
+    private String jdbcURL = "jdbc:mysql://localhost:3306/user_1";
     private String jdbcUsername = "root";
     private String jdbcPassword = "codegym";
 
-    private static final String INSERT_USERS = "INSERT INTO users(name,email,country) VALUE(?,?,?);";
+    private static final String INSERT_USERS = "call list_user();";
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
