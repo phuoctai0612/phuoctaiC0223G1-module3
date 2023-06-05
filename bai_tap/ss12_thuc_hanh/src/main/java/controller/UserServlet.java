@@ -39,27 +39,27 @@ public class UserServlet extends HttpServlet {
                 }
                 break;
             case "delete":
-                deleteUser(request,response);
+                deleteUser(request, response);
                 break;
             case "edit":
-                editUser(request,response);
+                editUser(request, response);
                 break;
             case "findName":
-                findList(request,response);
+                findList(request, response);
             case "sort":
-                sortName(request,response);
+                sortName(request, response);
                 break;
         }
     }
 
-    private void findList(HttpServletRequest request,HttpServletResponse response) {
+    private void findList(HttpServletRequest request, HttpServletResponse response) {
         List<User> listUser;
-        String name= request.getParameter("findName");
-        listUser= userDAO.findName(name);
-        request.setAttribute("listUser",listUser);
-        RequestDispatcher requestDispatcher=request.getRequestDispatcher("user/list.jsp");
+        String name = request.getParameter("findName");
+        listUser = userDAO.findName(name);
+        request.setAttribute("listUser", listUser);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/list.jsp");
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
             response.sendRedirect("/users");
         } catch (ServletException e) {
             e.printStackTrace();
@@ -81,13 +81,19 @@ public class UserServlet extends HttpServlet {
                     showNewForm(request, response);
                     break;
                 case "edit":
-                     int id=Integer.parseInt(request.getParameter("id"));
-                     request.setAttribute("id",id);
+                    int id = Integer.parseInt(request.getParameter("id"));
+                    request.setAttribute("id", id);
+                    String name = request.getParameter("name");
+                    request.setAttribute("name", name);
+                    String email = request.getParameter("email");
+                    request.setAttribute("email", email);
+                    String country = request.getParameter("country");
+                    request.setAttribute("country", country);
                     RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
                     dispatcher.forward(request, response);
                     break;
                 case "delete":
-                    deleteUser(request,response);
+                    deleteUser(request, response);
                     break;
                 default:
                     listUser(request, response);
@@ -99,19 +105,19 @@ public class UserServlet extends HttpServlet {
     }
 
     private void sortName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<User> listUser=  userDAO.sortName();
+        List<User> listUser = userDAO.sortName();
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         dispatcher.forward(request, response);
     }
 
-    private void editUser(HttpServletRequest request,HttpServletResponse response) {
-        int id=Integer.parseInt(request.getParameter("id"));
+    private void editUser(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         try {
-            userDAO.updateUser(id,new User(name,email,country));
+            userDAO.updateUser(id, new User(name, email, country));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -145,8 +151,9 @@ public class UserServlet extends HttpServlet {
         userDAO.insertUser(newUser);
         response.sendRedirect("/users");
     }
-    private void deleteUser(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
-           int id=Integer.parseInt(request.getParameter("deleteId"));
+
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("deleteId"));
         try {
             userDAO.deleteUser(id);
         } catch (SQLException e) {

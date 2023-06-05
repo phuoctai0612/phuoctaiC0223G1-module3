@@ -44,12 +44,12 @@
                 <td><c:out value="${user.email}"/></td>
                 <td><c:out value="${user.country}"/></td>
                 <td>
-                    <a href="/users?action=edit&id=${user.id}">Edit</a>
+                    <a href="/users?action=edit&id=${user.id}&name=${user.name}&email=${user.email}&country=${user.country}">Edit</a>
                 </td>
 
                 <td>
                     <a type="button" class="btn btn-primary"
-                       data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="deleteUser(${user.id},'${user.name}')">
+                       data-bs-toggle="modal" data-bs-target="#exampleModal" >
                         Delete
                     </a>
                 </td>

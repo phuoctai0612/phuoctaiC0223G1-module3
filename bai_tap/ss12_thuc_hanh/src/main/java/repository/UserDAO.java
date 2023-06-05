@@ -52,7 +52,6 @@ public class UserDAO implements IUserDAO {
         Connection connection = getConnection();
         try {
             Statement statement = connection.createStatement();
-
             ResultSet resultSet = statement.executeQuery(SELECT_ALL_USERS);
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
